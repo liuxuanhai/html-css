@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D移动translate3d</title>
+    <style>
+        body {
+            /* 透视写在被观察元素的父盒子里面 */
+            perspective: 200px;
+        }
+
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: purple;
+            /* transform: translateX(100px) translateY(100px) translateY(100px); */
+            /* 1.translateZ  沿着Z轴移动，后面单位一般跟px */
+            /* 2.translateZ(100px)即 向外移动100px，距我更近100px */
+            /* 3.3D移动的简写方法 */
+            /* transform: translate3d(100px,100px,100px); */
+            /* 4.xyz是不能省略的，如果没有就写0 */
+            /* 用了透视才能看见3D效果 */
+            transform: translate3d(400px, 100px, 100px);
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+</body>
+
+</html>

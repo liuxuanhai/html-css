@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS滤镜fiter之图片变模糊.html</title>
+    <style>
+        img {
+            /* blur是函数，小括号内的数值越大，图片越模糊，注意数值后一定要加px单位 */
+            filter: blur(10px);
+        }
+
+        img:hover {
+            filter: blur(0px);
+        }
+    </style>
+</head>
+
+<body>
+    <img src="images/baozi.webp" alt="">
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>行高的继承</title>
+    <style>
+        body {
+            color: pink;
+            /* font: 12px/24px 'Microsoft yahei'; */
+            font: 12px/1.5 'Microsoft yahei';
+        }
+
+        div {
+            /* 子元素继承了父元素body的行高1.5 */
+            /* 这个1.5就是当前元素文字font-size 的1.5倍，所以当前div行高是14*1.5=21px */
+            font-size: 14px;
+        }
+
+        p {
+            /* 当前p的行高是24px */
+            font-size: 16px;
+        }
+
+        /* li没有手动指定文字大小，则会继承父亲的文字大小ul->body 12px,所以li的文字大小是12px ，当前的行高为12*1.5=18px */
+    </style>
+</head>
+
+<body>
+    <div>保持谨慎</div>
+    <p>保持谨慎</p>
+    <ul>
+        <li>没有指定文字大小</li>
+    </ul>
+</body>
+
+</html>

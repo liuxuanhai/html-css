@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>清除浮动之:after伪元素法</title>
+    <style>
+        .clearfix:after {
+            content: "";
+            display: block;
+            height: 0;
+            clear: both;
+            visibility: hidden;
+        }
+
+        .clearfix {
+            /* IE 6/7专属 */
+            *zoom: 1;
+        }
+
+        .box {
+            width: 400px;
+            border: 1px solid red;
+        }
+
+        .ymao {
+            float: left;
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+
+        .emao {
+            float: left;
+            width: 100px;
+            height: 200px;
+            background-color: skyblue;
+        }
+
+        .clear {
+            clear: both;
+        }
+
+        .footer {
+            height: 200px;
+            background-color: gray;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box clearfix">
+        <div class="ymao">一毛</div>
+        <div class="emao">二毛</div>
+    </div>
+    <div class="footer"></div>
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>小米布局案例3</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            width: 1226px;
+            height: 625px;
+            background-color: pink;
+            margin: 0 auto;
+        }
+
+        .left {
+            width: 234px;
+            height: 625px;
+            background-color: purple;
+            float: left;
+        }
+
+        .right {
+            width: 992px;
+            height: 625px;
+            background-color: royalblue;
+            float: left;
+        }
+
+        .right>li {
+            width: 234px;
+            height: 300px;
+            background-color: pink;
+            list-style: none;
+            float: left;
+            margin-left: 14px;
+            margin-bottom: 14px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="left">左</div>
+        <ul class="right">
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+            <li>7</li>
+            <li>8</li>
+        </ul>
+    </div>
+</body>
+
+</html>

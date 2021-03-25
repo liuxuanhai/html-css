@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS属性选择器</title>
+    <style>
+        /* 选择首先是input，然后具有value属性的元素，选择这个元素  []  */
+        /* input[value] {
+            color: pink;
+        } */
+        /* 选择首先是input，然后选择type="text"文本框 */
+        input[type="text"] {
+            color: pink;
+        }
+
+        /* 选择首先是div，然后具有class属性且属性值以icon开头的元素 */
+        div[class^="icon"] {
+            color: red;
+        }
+
+        /* 选择首先是section，然后具有class属性且属性值以data结尾的元素 */
+        section[class$="data"] {
+            color: blue;
+        }
+
+        /* 选择首先是span，然后具有class属性且属性值里有"an"的元素，不管an在开头结尾还是中间 */
+        span[class*="an"] {
+            color: green;
+        }
+
+        /* 类选择器和属性选择器 伪类选择器 权重都是 10 */
+    </style>
+</head>
+
+<body>
+    <!-- 1.利用属性选择器就可以不用借助于类或id选择器 -->
+    <!-- <input type="text" name="" id="" value="请输入">
+    <input type="text" name="" id=""> -->
+    <!-- 2.属性选择器可以利用属性=值的某些元素 重点，务必掌握 -->
+    <input type="text" name="" id="">
+    <input type="password" name="" id="">
+    <!-- 3.属性选择器可以选择属性值开头的某些元素 -->
+    <div class="icon1">图标1</div>
+    <div class="icon2">图标2</div>
+    <div class="icon3">图标3</div>
+    <div>我是打酱油的</div>
+    <!-- 4.属性选择器可以选择属性值结尾的某些元素 -->
+    <section class="icon1-data">哥斯拉</section>
+    <section class="icon2-data">安琪拉</section>
+    <section class="icon3-ico">不安了</section>
+    <!-- 5.属性选择器可以选择有相同属性值（不管在何处位置）的某些元素 -->
+    <span class="gesila">哥斯拉</span>
+    <span class="anqila">安琪拉</span>
+    <span class="buanle">不安了</span>
+
+
+</body>
+
+</html>

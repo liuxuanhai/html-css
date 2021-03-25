@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css三角形</title>
+    <style>
+        .box {
+            width: 0;
+            height: 0;
+            /* border: 10px solid pink; */
+            border-top: 10px solid pink;
+            border-left: 10px solid gray;
+            border-right: 10px solid skyblue;
+            border-bottom: 10px solid green;
+        }
+
+        .box1 {
+            width: 0;
+            height: 0;
+            /* 下面两句话是为照顾兼容性，移动端布局不需要，一般写上也是可以的*/
+            line-height: 0;
+            font-size: 0;
+            border: 10px solid transparent;
+            border-top-color: pink;
+            margin: 100px auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+    <div class="box1"></div>
+</body>
+
+</html>

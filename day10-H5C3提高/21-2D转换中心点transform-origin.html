@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2D转换中心点transform-origin</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: green;
+            margin: 100px auto;
+            /* 1.默认转换中心点是50% 50%,等同于center center */
+            /* 2.将转换中心点改成左下角顶点 */
+            /* transform-origin: bottom left; */
+            /* 3.将转换中心改为50px 50px （坐标是相对于自身元素的） */
+            transform-origin: 50px 50px;
+            transition: all 1s;
+        }
+
+        div:hover {
+            transform: rotate(360deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+</body>
+
+</html>

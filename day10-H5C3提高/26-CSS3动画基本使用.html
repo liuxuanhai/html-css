@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS3动画基本使用</title>
+    <style>
+        /* 利用动画，实现页面一打开，一个盒子自动从左往右水平移动 */
+        /* 1.定义动画 */
+        /* from、to等价于0%、100% */
+        @keyframes move {
+
+            /* 开始状态 */
+            0% {
+                transform: translateX(0px);
+            }
+
+            /* 结束状态 */
+            100% {
+                transform: translateX(1500px);
+            }
+        }
+
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+            /* 2.调用动画 */
+            /* 动画名称 */
+            animation-name: move;
+            /* 持续时间 */
+            animation-duration: 2s;
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+</body>
+
+</html>

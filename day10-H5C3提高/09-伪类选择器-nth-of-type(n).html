@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>伪类选择器-nth-of-type(n)</title>
+    <style>
+        /* nth-child会先给所有的盒子排列标号，执行的时候首先看nth-child(1)，看孩子；然后回去看前面的div，元素是否匹配 */
+        section div:nth-child(1) {
+            color: red;
+        }
+
+        /* nth-of-type会先选择出指定的元素，再给指定元素排列标号，执行的时候首先看div 指定的元素，然后在看nth-of-type(1)第几个孩子 */
+        section div:nth-of-type(1) {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <p>光头强</p>
+        <div>熊大</div>
+        <div>熊二</div>
+    </section>
+</body>
+
+</html>

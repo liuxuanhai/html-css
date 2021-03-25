@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rotate实现三角箭头</title>
+    <style>
+        div {
+            position: relative;
+            width: 200px;
+            height: 30px;
+            border: 1px solid #000;
+        }
+
+        div::after {
+            content: '';
+            position: absolute;
+            top: 8px;
+            right: 14px;
+            width: 10px;
+            height: 10px;
+            border-right: 1px solid #000;
+            border-bottom: 1px solid #000;
+            transform: rotate(45deg);
+            transition: all 0.2s;
+        }
+
+        /* 鼠标经过div时，里面的箭头旋转 */
+        div:hover::after {
+            /* 注意是180+45=225，而不是180 */
+            top: 12px;
+            transform: rotate(225deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>三角强化的运用</title>
+    <style>
+        .box1 {
+            width: 0;
+            height: 0;
+            /* 把上边框宽度调大 */
+            /* border-top: 10px solid pink;
+            border-right: 5px solid transparent; */
+            /* 左和下边框宽度调为0 */
+            /* border-left: 0px solid skyblue;
+            border-bottom: 0px solid green; */
+            /* 1.只保留右边框有颜色 */
+            border-color: transparent red transparent transparent;
+            /* 2.样式都为solid */
+            border-style: solid;
+            /* 3.上边框宽度大，右边框宽度小 */
+            border-width: 22px 8px 0 0;
+        }
+
+        .price {
+
+            width: 160px;
+            height: 24px;
+            border: 1px solid red;
+            margin: 0 auto;
+            line-height: 24px;
+        }
+
+        .now {
+            position: relative;
+            float: left;
+            width: 90px;
+            height: 100%;
+            background-color: red;
+            text-align: center;
+            color: #fff;
+            font-weight: 700;
+            margin-right: 8px;
+        }
+
+        .now i {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 0;
+            height: 0;
+            border-color: transparent #fff transparent transparent;
+            border-style: solid;
+            /* 为什么上边框是24px，等于价格盒子的高度24px，右10px随便定比较小即可 */
+            border-width: 24px 10px 0 0;
+            font-size: 14px;
+            font-weight: 700;
+        }
+
+        .before {
+            font-size: 12px;
+            color: gray;
+            text-decoration: line-through;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box1"></div>
+    <div class="price">
+        <span class="now">
+            $1999
+            <i></i>
+        </span>
+        <span class="before">$3999</span>
+    </div>
+</body>
+
+</html>

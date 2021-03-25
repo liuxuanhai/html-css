@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>用translate实现盒子水平垂直居中</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        div {
+            position: relative;
+            width: 400px;
+            height: 400px;
+            background-color: pink;
+        }
+
+        p {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 200px;
+            height: 200px;
+            background-color: green;
+            /* 原来的做法，数值定死，一旦盒子宽高变化就得改变 */
+            /* margin-top: -100px;
+            margin-left: -100px; */
+            /* 现在的做法，更灵活 */
+            transform: translate(-50%, -50%);
+        }
+
+        span {
+            transform: translate(300px, 200px);
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <p></p>
+    </div>
+    <span>123</span>
+</body>
+
+</html>

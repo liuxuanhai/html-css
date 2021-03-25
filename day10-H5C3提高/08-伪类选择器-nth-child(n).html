@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>伪类选择器-nth-child(n)</title>
+    <style>
+        /* n是关键字 */
+        /* 选择所有奇数odd孩子 */
+        ul li:nth-child(odd) {
+            background-color: pink;
+        }
+
+        /* 选择所有偶数even孩子 */
+        ul li:nth-child(even) {
+            background-color: green;
+        }
+
+        /* n是公式 */
+        /* 括号里只能填n，不能是其他字母，从0开始，每次+1，往后面计算，此处为选择所有孩子 */
+        /* ol li:nth-child(n) {
+            background-color: gray;
+        } */
+
+        /* 等价于even */
+        /* ol li:nth-child(2n) {
+            background-color: skyblue;
+        } */
+        /* 等价于odd */
+        /* ol li:nth-child(2n+1) {
+            background-color: red;
+        } */
+
+        /* 选择前3个孩子 */
+        ol li:nth-child(-n+3) {
+            background-color: skyblue;
+        }
+
+        /* 选择第4个孩子到最后一个孩子 */
+        ol li:nth-child(n+4) {
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li>第1个孩子</li>
+        <li>第2个孩子</li>
+        <li>第3个孩子</li>
+        <li>第4个孩子</li>
+        <li>第5个孩子</li>
+        <li>第6个孩子</li>
+        <li>第7个孩子</li>
+    </ul>
+    <ol>
+        <li>第1个孩子</li>
+        <li>第2个孩子</li>
+        <li>第3个孩子</li>
+        <li>第4个孩子</li>
+        <li>第5个孩子</li>
+        <li>第6个孩子</li>
+        <li>第7个孩子</li>
+    </ol>
+</body>
+
+</html>

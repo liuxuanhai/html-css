@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>动画常用属性</title>
+    <style>
+        @keyframes move {
+            from {
+                transform: translate(0px, 0px);
+            }
+
+            to {
+                transform: translate(1000px, 0px);
+            }
+        }
+
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+            animation-name: move;
+            animation-duration: 4s;
+            /* 动画速度曲线，默认ease */
+            /* animation-timing-function: ease; */
+            /* 动画开始时间 */
+            /* animation-delay: 1s; */
+            /* 动画播放次数，interation意为重复的，infinite意为无限的 */
+            /* animation-iteration-count: infinite; */
+            /* 是否反方向播放,alternate反方向 */
+            /* animation-direction: alternate; */
+            /* 动画结束后的状态，默认backwards回到初始状态，forwards，停留在结束状态 */
+            /* animation-fill-mode: forwards; */
+            /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+            animation: move 4s linear infinite alternate;
+        }
+
+        div:hover {
+            /* 鼠标经过div时，让div停止动画，离开就继续动画 */
+            animation-play-state: paused;
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+</body>
+
+</html>
